@@ -46,7 +46,7 @@
   Nest everything except winner check function inside another while loop. At the end of it, ask to play again.
 </p>
 
-<h1> Step 1: Improve User Experience (Optional)</h1>
+<h1> Step 7: Improve User Experience (Optional)</h1>
 <p>
   When we are asking for user to play again, we can ask them if they want to continue with same players or new players, and use a boolean variable to keep track of it.
   <br>
