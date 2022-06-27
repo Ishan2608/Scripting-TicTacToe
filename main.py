@@ -196,6 +196,9 @@ def tic_tac_toe():
             else:
                 continue
 
+            if False not in check_table:
+                break
+
         output.clear()
         # print_ui(table, player1, player2, player1_score, player2_score)
         print_ui(table)
