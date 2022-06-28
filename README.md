@@ -53,9 +53,3 @@
   If it is true, we ask players for name in game loop, otherwise not. We can also create a separate function for printing our table. <br>
   Remember, at end of each game, i.e., in each new iteration of outer while loop, both 2-D lists need to be set to their default value.
 </p>
-
-<h3> Improvements Required </h3>
-<p>
-  The commented out code for score keeping in case the same players want to continue is not working. 
-  When player1 wins, both players get increment of 1 in score and when player2 wins, nothing happens to score. 
-</p>
