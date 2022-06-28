@@ -4,15 +4,14 @@ MARK1 = 'O'
 MARK2 = 'X'
 
 
-# def print_ui(table, player1, player2, score1, score2):
-def print_ui(table):
+def print_ui(table, player1, player2, score1, score2):
 
-    # print('-----------------------Score Board-----------------------')
-    # print(f"{player1}: {score1}")
-    # print(f"{player2}: {score1}")
-    # print('---------------------------------------------------------')   
+    print('-----------------------Score Board-----------------------')
+    print(f"{player1}: {score1}")
+    print(f"{player2}: {score2}")
+    print('---------------------------------------------------------')   
 
-    # print()
+    print()
 
     print('------------------Your Tic Tac Toe Table------------------')
     for i in range(len(table)):
@@ -78,7 +77,6 @@ def check_win(table, player1, player2):
     left_diagnol_count_for_x = 0
     for i in range(len(table)):
         for j in range(len(table[0])):
-            # print(mat[i][i])
             if table[i][i] == 'O':
                 left_diagnol_count_for_o += 1
                 break
@@ -112,24 +110,28 @@ def check_win(table, player1, player2):
 
 def tic_tac_toe():
 
-    global ask_players 
-    # global player1_score, player2_score
-
     MARK1 = 'O'
     MARK2 = 'X'
+
+    player1_score = 0
+    player2_score = 0
+
+    ask_players = True
 
     eol = True
     while eol:
         if ask_players == True:
             player1 = input(f"Player 1, enter you name(your mark: {MARK1}): ")
             player2 = input(f'Player 2, enter your name(your mark: {MARK2}): ')
-            # player1_score = 0
-            # player2_score = 0
+            player1_score = 0
+            player2_score = 0
 
         current_player = ""
         current_player_mark = ""
         current_player_identifier = 0
         the_winner_of_game = ""
+
+        winner = 0
 
         table = [['_', '_', '_'],
                 ['_', '_', '_'],
@@ -139,14 +141,11 @@ def tic_tac_toe():
                         [False, False, False],
                         [False, False, False]]
 
-        winner = 0
-
         playing_game = True
         while playing_game:
 
             output.clear()
-            # print_ui(table, player1, player2, player1_score, player2_score)
-            print_ui(table)
+            print_ui(table, player1, player2, player1_score, player2_score)
 
             if current_player_identifier % 2 == 0:
                 current_player = player1
@@ -180,31 +179,32 @@ def tic_tac_toe():
                 check_table[row][column] = True
 
             winner = check_win(table, player1, player2)
-
             if winner == 1:
-                # player1_score += 1
+                player1_score += 1
                 the_winner_of_game = player1
                 playing_game = False
                 break
                 
             elif winner == 2:
-                # player2_score += 1
+                player2_score += 1
                 the_winner_of_game = player2
                 playing_game = False
                 break
-                
-            else:
-                continue
 
-            if False not in check_table:
+            if False not in check_table[0] and False not in check_table[1] and False not in check_table[2]:
+                winner = 0
                 break
 
+
         output.clear()
-        # print_ui(table, player1, player2, player1_score, player2_score)
-        print_ui(table)
+        print(f"Winner number: {winner}")
+        print_ui(table, player1, player2, player1_score, player2_score)
+
 
         if winner == 1 or winner == 2:
             print(f"{the_winner_of_game} wins")
+        elif winner == 0:
+            print('Draw')
         else:
             print('Game was left before winner could be decided.')
 
@@ -225,7 +225,6 @@ def tic_tac_toe():
 ask = input('Do you want to play tic tac to?(y/n): ').lower()
 if ask == 'y':
     output.clear()
-    ask_players = True
     tic_tac_toe()
 else:
     print('Program exit successfully.')
