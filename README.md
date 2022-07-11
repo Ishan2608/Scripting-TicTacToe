@@ -1,6 +1,10 @@
 <h1> Scripting-TicTacToe </h1>
 <p> A simple python scripting program which implements the famous 'Tic Tac Toe' game. </p>
 
+<div>
+  <img src="./Scripting_TicTacToe.JPG" alt="Code Output">
+</div>
+
 <h1> Step 1: Creating Blank Tables </h1>
 <p>
   We start by creating a 2-D list, of 3X3 dimensions. Each value is set to "_". This represents our blank tic tac toe table. <br>
