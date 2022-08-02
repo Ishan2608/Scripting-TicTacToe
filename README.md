@@ -5,6 +5,15 @@
   <img src="./Scripting_TicTacToe.JPG" alt="Code Output">
 </div>
 
+<hr>
+
+<div>
+  <h1> Program Flowchart </h1>
+  <img src="./Scripting TicTacToe Flowchart.png" alt="Program Flowchart">
+</div>
+
+<hr>
+
 <h1> Step 1: Creating Blank Tables </h1>
 <p>
   We start by creating a 2-D list, of 3X3 dimensions. Each value is set to "_". This represents our blank tic tac toe table. <br>
@@ -57,3 +66,5 @@
   If it is true, we ask players for name in game loop, otherwise not. We can also create a separate function for printing our table. <br>
   Remember, at end of each game, i.e., in each new iteration of outer while loop, both 2-D lists need to be set to their default value.
 </p>
+
+<hr>
