@@ -131,7 +131,7 @@ def tic_tac_toe():
         current_player_identifier = 0
         the_winner_of_game = ""
 
-        winner = 0
+        winner = -1
 
         table = [['_', '_', '_'],
                 ['_', '_', '_'],
@@ -149,8 +149,10 @@ def tic_tac_toe():
 
             if current_player_identifier % 2 == 0:
                 current_player = player1
+                current_player_mark = MARK1
             else:
                 current_player = player2
+                current_player_mark = MARK2
 
             current_player_identifier += 1
 
@@ -166,14 +168,11 @@ def tic_tac_toe():
             arr = place.split()
             row = int(arr[0]) - 1
             column = int(arr[1]) - 1
-            if current_player == player1:
-                current_player_mark = MARK1
-            else:
-                current_player_mark = MARK2
 
             if check_table[row][column] == True:
                 print('Place Already Occupied.')
                 current_player_identifier += 1
+                continue
             else:
                 table[row][column] = current_player_mark
                 check_table[row][column] = True
@@ -197,7 +196,6 @@ def tic_tac_toe():
 
 
         output.clear()
-        print(f"Winner number: {winner}")
         print_ui(table, player1, player2, player1_score, player2_score)
 
 
