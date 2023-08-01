@@ -1,6 +1,6 @@
 # Scripting-TicTacToe
 
-Welcome to Scripting-TicTacToe, where you can play the famous tic-tac-toe game directly in the computer console. This Python project brings the classic two-player game to life, providing an enjoyable and interactive gaming experience for intermediate-level developers.
+Welcome to Scripting-TicTacToe, where you can play the famous tic-tac-toe game directly on the computer console. This Python project brings the classic two-player game to life, providing an enjoyable and interactive gaming experience for intermediate-level developers.
 
 # Overview
 Tic-tac-toe is a well-known paper-and-pencil game played on a 3x3 grid. The objective is simple: two players take turns marking their respective symbols (usually "X" and "O") on the grid, aiming to form a line of three of their marks in a row, column, or diagonal. This project implements the game logic and user interface within the console, allowing players to have fun and challenge each other.
@@ -19,7 +19,7 @@ After a game is completed, players have two options to play again:
 
 - Play Again with New Players: Start a new game with different players, offering a fresh challenge each time.
 - Play Again with the Same Players: Play another round with the same players, allowing for a rematch.
-- 
+
 ## Score Tracking
 Scripting-TicTacToe keeps track of each player's wins, losses, and draws throughout their gaming sessions. This feature lets players compete and strive to improve their performance.
 
