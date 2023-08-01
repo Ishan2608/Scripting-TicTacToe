@@ -1,72 +1,27 @@
-<h1> Scripting-TicTacToe </h1>
-<p> A simple python scripting program which implements the famous 'Tic Tac Toe' game. </p>
+# Scripting-TicTacToe
 
-<div>
-  <img src="./Scripting_TicTacToe.JPG" alt="Code Output">
-</div>
+Welcome to Scripting-TicTacToe, where you can play the famous tic-tac-toe game directly in the computer console. This Python project brings the classic two-player game to life, providing an enjoyable and interactive gaming experience for intermediate-level developers.
 
-<hr>
+# Overview
+Tic-tac-toe is a well-known paper-and-pencil game played on a 3x3 grid. The objective is simple: two players take turns marking their respective symbols (usually "X" and "O") on the grid, aiming to form a line of three of their marks in a row, column, or diagonal. This project implements the game logic and user interface within the console, allowing players to have fun and challenge each other.
 
-<div>
-  <h1> Program Flowchart </h1>
-  <img src="./Scripting TicTacToe Flowchart.png" alt="Program Flowchart">
-</div>
+# Features
+Scripting-TicTacToe comes with several exciting features:
 
-<hr>
+## Two Players Enter Their Names
+At the start of the game, players are prompted to enter their names. This personalized experience makes the game more engaging and competitive.
 
-<h1> Guide to Build this Project </h1>
+## Play and Show Results
+Players take turns entering their moves on the 3x3 grid until the game reaches a conclusion. The application then displays the results, indicating whether a player won, lost, or if the game ended in a draw.
 
-<h2> Step 1: Creating Blank Tables </h2>
-<p>
-  We start by creating a 2-D list, of 3X3 dimensions. Each value is set to "_". This represents our blank tic tac toe table. <br>
-  Then we create another 2-D list with same dimensions where each value is set to False. This is used to tell if a certain position in blank table is occupied or not.
-</p>
+## Two Types of Play Again Options
+After a game is completed, players have two options to play again:
 
-<h2> Step 2: Creating Players </h2>
-<p>
-  <ol>
-    <li> Create two constants that will hold the the marks of the game. </li>
-    <li> Use input() function two times to ask for user names. </li>
-    <li> Create an interger variable with value set to 0. We will use this to identify which user's turn it is. </li>
-    <li> Create 3 other variables, current_player and current_player_mark, and winning_player. All are empty strings. </li>
-    <li> If identifier is even, its player1's turn, else player2's turn. Assign values to current_player and current_player_mark based on this check. </li>
-  </ol>
-</p>
+- Play Again with New Players: Start a new game with different players, offering a fresh challenge each time.
+- Play Again with the Same Players: Play another round with the same players, allowing for a rematch.
+- 
+## Score Tracking
+Scripting-TicTacToe keeps track of each player's wins, losses, and draws throughout their gaming sessions. This feature lets players compete and strive to improve their performance.
 
-<h2> Step 3: Mark the Table </h2>
-<p>
-  Ask user to enter the cell index he want to place his mark at. Replace it with the current player's mark, while showing which player's turn it is. <br>
-  Then set the value to True for that index in the second 2-D List we created in step 2. <br>
-  Before assinging the mark, check the value for that index in 2-D list of boolean values. 
-  If it is False, only then the player can place his mark. If it is True, just increment identifier by 1. So that same player's turn remains.
-  <br>
-</p>
-
-<h2> Step 4: Define the Loop </h2>
-<p>
-  Since step 3 activity needs to happen again and again, we run a while loop, based on a boolean, which will be set to false, only one on player wins. <br>
-  The other condition for the loop to end is that table is completely filled. In the starting of this loop, we use increment identifier by 1.
-</p>
-
-<h2> Step 5: Checking the Winner </h2>
-<p>
-  We create a function where we need to check the winner. We iterate the tic tac toe table in four ways. <br>
-  Row traversal, column traversal, first diagnol traversal and second diagnol traversal. 
-  In each traversal we check if either mark appears 3 times. Then return 1 if player1 wins, otherwise return 2. If none won, we return "continue".
-</p>
-
-<h2> Step 6: End of Current Game Loop. Play Again </h2>
-<p>
-  Assign the winning_player variable a value based on the value returned from winner check function. Print the winner. 
-  Nest everything except winner check function inside another while loop. At the end of it, ask to play again.
-</p>
-
-<h2> Step 7: Improve User Experience (Optional)</h2>
-<p>
-  When we are asking for user to play again, we can ask them if they want to continue with same players or new players, and use a boolean variable to keep track of it.
-  <br>
-  If it is true, we ask players for name in game loop, otherwise not. We can also create a separate function for printing our table. <br>
-  Remember, at end of each game, i.e., in each new iteration of outer while loop, both 2-D lists need to be set to their default value.
-</p>
-
-<hr>
+## Clean and Updated UI
+The console interface is designed for clarity and ease of use. Players are guided through the game with clear instructions and updates after each move. The UI remains clean and well-organized throughout the entire gaming experience.
